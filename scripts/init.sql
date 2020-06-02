@@ -1,0 +1,10 @@
+CREATE DATABASE solicitacoes;
+\c solicitacoes
+
+CREATE TABLE pedidos (
+    id SERIAL NOT NULL,
+    data TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    nome VARCHAR(100) NOT NULL,
+    assunto VARCHAR(100) NOT NULL,
+    mensagem VARCHAR(250) NOT NULL
+);
